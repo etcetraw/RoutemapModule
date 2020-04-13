@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
+    <AssemblyName>RoutemapModule</AssemblyName>
+    <RootNamespace>RoutemapModule</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+  </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="GTFS" Version="3.0.0-pre003" />
+    <PackageReference Include="GtfsRealtimeBindings" Version="0.0.4" />
+    <PackageReference Include="OrchardCore.Module.Targets" Version="1.0.0-rc1-12751" />
+    <PackageReference Include="protobuf-net" Version="3.0.0-alpha.143" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Test\Index.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Test\Index.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+
+</Project>
